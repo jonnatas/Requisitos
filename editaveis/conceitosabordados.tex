@@ -1,0 +1,67 @@
+\chapter{Conceitos Abordados na Disciplina}\label{cap5}
+
+Nesta seção será explicitado o material estudado e explorado bem como os conceitos discutidos dentro da disciplina. Cada assunto foi de grande contribuição e ajudou no desenvolvimento deste trabalho.
+
+\section{Web Sintática vs. Web Semântica}
+
+No inicio da internet, os web sites criados eram voltado à apresentação de conteúdo, cuja sua interpretação ficava delegada aos seres humanos. As páginas web pouco continha informações sobre si mesma. Estas páginas em grande quantidade trazem um grande problema para mecanismos de busca tais como : (i) baixa precisão da busca, mesmo quando a quantidade de páginas retornadas é grande; (ii) resultados sensíveis ao vocabulário, em alguns casos até a ordem em que as palavras são digitadas influenciam o resultado da busca; e (iii) resultados são páginas individuais, onde muitas páginas de resultado são do mesmo site.  Karin Breitman afirma em seu livro “Web Semântica - A internet do futuro”, que todos esses problemas apresentados são oriundos da Web Sintática. E com o crescimento exponencial da web, viu-se a necessidade em otimizar a organização da informação para que o computador seja capaz de compreender o conteúdo de uma web site e ao fazermos uma busca, este computador selecione as páginas que possuem o conteúdo mais preciso. E assim, finalmente, responder a questão : Porque os computadores não podem realizar esse trabalho para nós?.
+
+Pesquisadores da Inteligência artificial vêm propondo uma série de modelos de organização da internet. O objetivo central é organizar a informação de maneira padronizada, como é feito na classificação dos seres vivos pelo biólogos, dessa maneira contribuir na facilitação em localizar uma informação. A organização dos conteúdos presente na web possibilita a compreensão deste por computadores, e isso caracteriza a Web semântica. Karin Breitman apresenta em seu livro, temas importantes relacionados à Web Semântica. Tais como: (i) Metadados, que são dados sobre dados e são úteis na indexação de páginas e sites na Web semântica, assim permitindo que outros computadores saibam de que assuntos eles tratam; (ii) Ontologias, são especificações formais e explicitas de conceitualizações compartilhadas. Ontologias são modelos conceituais que servem como base para garantir uma comunicação livre de ambiguidades; (iii) Linguagens da Web semântica, são linguagens que facilitem a publicação de ontologias em um formato que capacitem os computadores a processar sua informação; (iv) Construção de modelos semânticos, consiste em construir ontologias gerais para organização da web; (v) Web Services, são servidores que disponibilizam determinados serviços a serem consumidos por computadores, onde a comunicação pode ser feita através de trocas de arquivos xml ou Json; (vi) Agentes, são softwares autônomos e assíncronos que agem em beneficio de seus usuários, realizando tarefas de buscas e seleção de conteúdos na web, por exemplo, que sejam de interesse de seus usuários; e (vii) Ferramentas, quais ferramentas existentes para se implementar a web semântica.
+
+Karin Breitman diz que a web semântica não é inteligência artificial, pois o conceito de documentos compreensíveis por computadores não implica uma inteligência artificial. Uma vez que a web semântica auxilia a organização do conteúdo, enquanto que uma das vertentes da  inteligência é compreender a linguagem humana. A web semântica não é uma web separada, mas sim uma extensão da web atual.
+
+\section{Metadados}
+
+Metadados são dados sobre dados. São informações sobre um documento: data, autor, editora, etc. A international Federation of Library Associations (IFLA) define metadados da seguinte forma : 
+\begin{citacao}
+ Metadados são dados sobre dados. O termo se refere a qualquer informação utilizada para identificação, descrição e localização de recursos.
+\end{citacao}
+
+A W3C (World Web Consortium) tem uma visão mais voltada para a web semântica. metadados são definidos como “informações para a web que pode ser compreendidas por máquinas”. Segundo Karin Breitman,  o tema metadado ainda está aberto a discussões nas várias comunidades onde ele é utilizado. Uma das consequências mais interessantes da adoção de metadados no contexto da web semântica é a de que a disciplina de Catalogação praticada apenas por curadores de museus ou bibliotecários, passou atualmente para o primeiro plano da pesquisa em ciência da informação. 
+
+\section{Dublin Core}
+
+O Dublin Core é um padrão bastante simples, como pode ser observado a partir do grupo básico de elementos que o compõem. Ele rapidamente se tornou padrão para metadados, e atualmente é um padrão ANSI (ANSI/NISO Z39.85) e norma ISO (ISO Standart 15836-2003 Fevereiro de 2003). Os elementos que compõem o padrão Dublin Core são: 
+
+\begin{itemize}
+\item Assunto
+\item Título
+\item Criador
+\item Descrição
+\item Editor
+\item Outro agente (contribuidor, coautores)
+\item Data
+\item Tipo de origem
+\item Formato
+\item Identificador
+\item Relacionamento (relação com outro objetos)
+\item Fonte
+\item Linguagem
+\item Cobertura
+\item Direitos
+\end{itemize}
+
+\section{Framework de Warwick}
+
+Esse padrão surgiu da necessidade de ampliar o Dublin Core, considerado muito simples, pois só disponibiliza um formato para descrição de recursos. Foi então criada uma nova arquitetura, baseada no conceito de um contêiner, que agrega vários tipos de metadados em pacotes separados, onde, nesta arquitetura o Dublin Core é apenas um dos pacotes. Os conceitos básicos de Dublin Core não foram modificados pelo Framework de Warwick, foram apenas adicionados novos elementos: 
+
+\begin{itemize}
+\item Descrições específicas do domínio do documento (objeto)
+\item Termo e condições de uso do documento
+\item Rótulo e gradação do documento
+\item Informações de segurança, autenticidade, assinaturas
+\item Origem do fornecedor
+\item Conjunto de containers para documentos compostos e ponteiros para todas as manifestações, instâncias ou versões do documento
+\item Responsável por armazenar o documento
+\item Conjunto de descritores do Dublin Core do documento
+\end{itemize}
+
+O Framework de Warwick deixa em aberto algumas questões. A primeira é a independência de sintaxe. Cada um dos pacotes (Dublin Core, MARC e Referência Indireta) pode utilizar uma sintaxe diferente, o que não garante que dois pacotes poderão trocar dados entre si. Outro problema é sobre a semântica utilizada. De modo a tratar essas dificuldades, um novo padrão surgiu, o RDF — Resource Description Framework.
+
+\section{Resource Description Framework - RDF}
+
+O RDF é uma linguagem declarativa que fornece uma maneira padronizada de utilizar o XML para representar metadados no formato de sentenças sobre propriedades e relacionamentos entre itens na web. Pode-se intender o RDF como uma implementação do Framework  de Warwick, e uma grande influência do RDF veio da comunidade de Representação do Conhecimento (KR - Knowledge Representation). Estes pesquisadores estão estudando maneiras de representar conhecimento sob um formato que permita às máquinas processá-lo. O RDF foi projetado de modo a representar metadados de recursos web de maneira legisle e processável por máquinas.  Um dos objetivos do RDF é tornar a semântica de recursos web acessível a computadores. Ele vai acrescentar metainformações a esses recursos, de modo a possibilitar às máquinas lidarem com eles de modo inteligente. Em RDF escrevemos frases do tipo Recurso + Propriedade + Valor. Essas partes pode ser compreendidas como o sujeito, o predicado e o objeto de uma sentença.
+
+\section{Ontologias e Ciências da Computação}
+
+A palavra ontologia vem do grego ontos (ser) + logos (palavra). Ontologia, na Filosofia, é a ciência do que é, dos tipos de estruturas dos objetos, propriedades, eventos, processos e relacionamentos em todas as áreas da realidade. Segundo Karin Breitman, a definição de ontologia encontrada mais frequentemente na literatura da web semântica é a proposta pro Gruber: “Ontologia é uma especificação formal e explícita de uma conceitualização compartilhada.” . Contextualização representa um modelo abstrato de algum fenômeno que identifica os conceitos relevantes para o mesmo. Explicita significa que os elementos e suas restrições estão claramente definidos. Formal significa que a ontologia deve ser passível de processamento automático, e compartilhada reflete a noção de que uma ontologia captura conhecimento consensual, aceito por um grupo de pessoas. De maneira mais sucinta, a W3C coloca que ontologias devem promover descrições para os seguintes tipos de conceitos: (i) Classes (ou “coisas”) nos vários domínios de interesse; (ii) Relacionamentos entre essas “coisas”; e (iii) Propriedades ( ou atributos) que essas “coisas” devem possuir. 
